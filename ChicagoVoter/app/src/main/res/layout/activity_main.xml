@@ -22,21 +22,21 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <Button
+    <Button style="@style/Widget.AppCompat.Button.Borderless"
         android:id="@+id/current_events_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/current_events_string" />
 
-    <Button
+    <Button style="@style/Widget.AppCompat.Button.Borderless"
         android:id="@+id/voter_information_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/voter_information_string" />
 
-    <Button
+    <Button style="@style/Widget.AppCompat.Button.Borderless"
         android:id="@+id/my_representatives_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
