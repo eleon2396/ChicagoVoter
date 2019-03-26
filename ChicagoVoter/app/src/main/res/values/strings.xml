@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ChicagoVoter</string>
+    <string name="current_events_string">Current Events</string>
+    <string name="voter_information_string">Voter Information</string>
+    <string name="my_reps_string">My Representatives</string>
+    <string name="home_desc">The home screen icon indicates that the user is currently in the home activity</string>
+</resources>
