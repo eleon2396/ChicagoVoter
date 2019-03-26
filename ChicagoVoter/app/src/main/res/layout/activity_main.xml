@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="4dp"
@@ -20,10 +21,20 @@
             android:contentDescription="@string/home_desc"
             />
 
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/app_title"
+            android:textSize="25dp" />
+
     </android.support.v7.widget.Toolbar>
 
-    <Button style="@style/Widget.AppCompat.Button.Borderless"
+    <Button
         android:id="@+id/current_events_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
