@@ -5,5 +5,5 @@
     <string name="my_reps_string"> <font size="25">My Representatives</font>\n\n<font size="12">Find more information on who your local officials are</font></string>
     <string name="home_desc">The home screen icon indicates that the user is currently in the home activity</string>
     <string name="app_title"><b>Chicago Voter</b></string>
-    <string name="settings_string">Settings</string>
+    <string name="settings_string"><b>Settings</b></string>
 </resources>
