@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Votante De Chicago</string>
+    <string name="current_events_string"><font size="25">Eventos actuales</font>\n\n<font size="12">Encuentra información sobre eventos políticos cerca de ti. Aprenda más sobre candidatos activos</font></string>
+    <string name="voter_information_string"><font size="25">Información para el votante</font>\n\n<font size="12">Averigüe si es elegible para votar y dónde puede votar</font></string>
+    <string name="my_reps_string"> <font size="25">Mis representantes</font>\n\n<font size="12">Encuentre más información sobre quiénes son sus funcionarios locales.</font></string>
+    <string name="home_desc">El icono de la pantalla de inicio indica que el usuario está actualmente en la actividad de inicio</string>
+    <string name="app_title"><b>Votante De Chicago</b></string>
+    <string name="settings_string"><b>Ajustes</b></string>
+    <string name="Test"><b>ESTE ES UN EXAMEN1</b></string>
+
+</resources>

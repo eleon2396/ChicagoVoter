@@ -10,9 +10,9 @@
         android:id="@+id/settings_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_red_dark"
         android:elevation="4dp"
-        android:gravity="center_vertical|start"
-        android:background="@color/action_bar_color">
+        android:gravity="center_vertical|start">
 
         <TextView
             android:layout_width="100dp"
@@ -26,9 +26,17 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <Button
+        android:id="@+id/changeLanguageButton"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:text="Change Language" />
+
     <TextView
+        android:id="@+id/testTexView"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="another herro" />
+        android:layout_height="wrap_content"
+        android:text="@string/Test"
+        android:textSize="30sp" />
 
 </LinearLayout>

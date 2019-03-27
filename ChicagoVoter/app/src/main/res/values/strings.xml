@@ -6,4 +6,6 @@
     <string name="home_desc">The home screen icon indicates that the user is currently in the home activity</string>
     <string name="app_title"><b>Chicago Voter</b></string>
     <string name="settings_string"><b>Settings</b></string>
+    <string name="Test"><b>THIS IS A TEST1</b></string>
+
 </resources>
