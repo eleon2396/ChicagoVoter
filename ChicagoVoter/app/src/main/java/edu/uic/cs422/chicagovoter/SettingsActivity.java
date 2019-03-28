@@ -12,6 +12,9 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -58,6 +61,23 @@ public class SettingsActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        //Switch for Notifications but we havent set up yet what kind of notifactions, for now a Toast
+        Switch notificationSwitch  = (Switch)findViewById(R.id.notificationSwitch);
+        notificationSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    Toast.makeText(getApplicationContext(), "THE NOTIFICATIONS ARE ON", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "THE NOTIFICATIONS ARE OFF", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
     }
 
     private void sendLan(String language){

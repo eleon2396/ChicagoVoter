@@ -8,4 +8,12 @@
     <string name="settings_string"><b>Settings</b></string>
     <string name="Test"><b>THIS IS A TEST1</b></string>
 
+    <string name="Notifications">Notifications</string>
+    <string name="Switch">Allow Push Notifications</string>
+    <string name="Accessibility">Accessibility</string>
+    <string name="ChangeToSpan">Change to Spanish</string>
+    <string name="ChangeToEng">Change to English</string>
+    <string name="TextSize">Change Text Size</string>
+
+    <string name="VoterInfo">Voter Information</string>
 </resources>

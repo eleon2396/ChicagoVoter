@@ -8,4 +8,13 @@
     <string name="settings_string"><b>Ajustes</b></string>
     <string name="Test"><b>ESTE ES UN EXAMEN1</b></string>
 
+    <string name="Notifications">Notificaciones</string>
+    <string name="Switch">Permitir notificaciones</string>
+    <string name="Accessibility">Accesibilidad</string>
+    <string name="ChangeToSpan">Cambia al español</string>
+    <string name="ChangeToEng">Cambia al Inglés</string>
+    <string name="TextSize">Cambiar Tamaño del Texto</string>
+
+    <string name="VoterInfo">Información para el votante</string>
+
 </resources>

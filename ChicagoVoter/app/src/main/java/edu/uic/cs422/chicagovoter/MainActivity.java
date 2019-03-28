@@ -67,32 +67,6 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(mReceiver1, mfilter1);
     }
 
-        @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_main);
-
-        Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.mToolbar);
-        setSupportActionBar(chicagoToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        receiver();
-            Intent intent = getIntent();
-            String check = intent.getStringExtra("com.CHECK");
-            if(check == null){
-                Toast.makeText(getApplicationContext(), "THIS IS EMPTY", Toast.LENGTH_LONG).show();
-            }
-            else{
-                Intent getLan = getIntent();
-                String language = getLan.getStringExtra("com.LAN");
-                setAppLocale(language, getApplicationContext());
-
-
-            }
-
-    }
-
     private void setAppLocale(String localCode, Context context){
         Resources res  = context.getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
@@ -104,11 +78,43 @@ public class MainActivity extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
     }
 
-
     @Override
-    protected void onResume(){
-        super.onResume();
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_main);
+
+        Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        setSupportActionBar(chicagoToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        receiver();
+
+        Intent intent = getIntent();
+        String check = intent.getStringExtra("com.CHECK");
+        if(check == null){
+            Toast.makeText(getApplicationContext(), "THIS IS EMPTY", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Intent getLan = getIntent();
+            String language = getLan.getStringExtra("com.LAN");
+            setAppLocale(language, getApplicationContext());
+        }
+
+        startVoterActivity();
     }
+
+    private void startVoterActivity(){
+        Button voterBtn = (Button)findViewById(R.id.voter_information_button);
+        voterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+    }
+
+
+
 
 }
