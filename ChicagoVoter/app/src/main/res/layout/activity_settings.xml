@@ -27,16 +27,15 @@
     </android.support.v7.widget.Toolbar>
 
     <Button
-        android:id="@+id/changeLanguageButton"
+        android:id="@+id/changeToSpanishBTN"
         android:layout_width="149dp"
         android:layout_height="wrap_content"
-        android:text="Change Language" />
+        android:text="Change to Spanish" />
 
-    <TextView
-        android:id="@+id/testTexView"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/changeToEnglishBTN"
+        android:layout_width="149dp"
         android:layout_height="wrap_content"
-        android:text="@string/Test"
-        android:textSize="30sp" />
+        android:text="Change to English" />
 
 </LinearLayout>

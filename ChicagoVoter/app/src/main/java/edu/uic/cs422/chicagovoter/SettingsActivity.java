@@ -17,7 +17,7 @@ import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private String mLanguageCode = "es";
+    private static final String SETTINGS_INTENT="com.example.eleon.SETTINGS";
 
 
     @Override
@@ -37,20 +37,47 @@ public class SettingsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
-        Button changeLanguageBTN = (Button)findViewById(R.id.changeLanguageButton);
-        changeLanguageBTN.setOnClickListener(new View.OnClickListener() {
+        Button changeToSpanishBTN = (Button)findViewById(R.id.changeToSpanishBTN);
+        Button changeToEngBTN = (Button)findViewById(R.id.changeToEnglishBTN);
+        changeToSpanishBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setAppLocale("sp");
 
-                Intent intent = getIntent();
-                setResult(Activity.RESULT_OK, intent);
+                setAppLocale("sp");
+                sendLan("sp");
                 finish();
-                startActivity(intent);
 
             }
         });
+
+        changeToEngBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setAppLocale("en");
+                sendLan("en");
+                finish();
+            }
+        });
     }
+
+    private void sendLan(String language){
+        Intent changeLan = new Intent(SETTINGS_INTENT);
+        changeLan.putExtra("com.LAN",  language);
+        sendOrderedBroadcast(changeLan, null);
+    }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
+
+
+    private void RestartActivity(){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
 
     private void setAppLocale(String localCode){
         Resources res = getResources();
@@ -59,10 +86,8 @@ public class SettingsActivity extends AppCompatActivity {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             conf.setLocale(new Locale(localCode.toLowerCase()));
         }
-        else {
-            conf.locale = new Locale(localCode.toLowerCase());
-        }
         res.updateConfiguration(conf, dm);
+
     }
 
 }
