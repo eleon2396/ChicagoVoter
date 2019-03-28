@@ -16,4 +16,15 @@
     <string name="TextSize">Change Text Size</string>
 
     <string name="VoterInfo">Voter Information</string>
+    <string name="nameView">Name:</string>
+    <string name="EnterName">Enter your name</string>
+    <string name="addressView">Address:</string>
+    <string name="EnterAddress">Enter your address</string>
+    <string name="citizenShipView">What is your current citizenship status?</string>
+    <string name="citizenshipView">Have you ever been convicted of a felony?</string>
+    <string name="q1YesButton">Yes</string>
+    <string name="q1NoButton">No</string>
+    <string name="livedInChicagoView">Have you lived in the city of Chicago for atleast 30 days?</string>
+    <string name="q2YesButton">Yes</string>
+    <string name="q2NoButton">No</string>
 </resources>
