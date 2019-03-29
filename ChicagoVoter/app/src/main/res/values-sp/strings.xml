@@ -6,6 +6,7 @@
     <string name="home_desc">El icono de la pantalla de inicio indica que el usuario está actualmente en la actividad de inicio</string>
     <string name="app_title"><b>Votante De Chicago</b></string>
     <string name="settings_string"><b>Ajustes</b></string>
+    <string name="representatives_string"><b>Representantes</b></string>
     <string name="Test"><b>ESTE ES UN EXAMEN1</b></string>
 
     <string name="Notifications">Notificaciones</string>
@@ -14,6 +15,7 @@
     <string name="ChangeToSpan">Cambia al español</string>
     <string name="ChangeToEng">Cambia al Inglés</string>
     <string name="TextSize">Cambiar Tamaño del Texto</string>
+    <string name="autofill_rep_text">buscar representante</string>
 
     <string name="VoterInfo">Información para el votante</string>
     <string name="nameView">Nombre:</string>

@@ -4,6 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".RepActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@android:color/holo_red_dark"
+        android:elevation="4dp"
+        android:gravity="center_vertical|start">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:paddingStart="35dp"
+            android:paddingEnd="10dp"
+            android:text="@string/representatives_string"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/rep_search_edittext"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:autofillHints="@string/autofill_rep_text"
+        android:drawableStart="@drawable/resizer"/>
+
+    <ListView
+        android:id="@+id/rep_officials_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
 </LinearLayout>

@@ -6,6 +6,7 @@
     <string name="home_desc">The home screen icon indicates that the user is currently in the home activity</string>
     <string name="app_title"><b>Chicago Voter</b></string>
     <string name="settings_string"><b>Settings</b></string>
+    <string name="representatives_string"><b>Representatives</b></string>
     <string name="Test"><b>THIS IS A TEST1</b></string>
 
     <string name="Notifications">Notifications</string>
@@ -14,6 +15,7 @@
     <string name="ChangeToSpan">Change to Spanish</string>
     <string name="ChangeToEng">Change to English</string>
     <string name="TextSize">Change Text Size</string>
+    <string name="autofill_rep_text">find representative</string>
 
     <string name="VoterInfo">Voter Information</string>
     <string name="nameView">Name:</string>
@@ -27,4 +29,65 @@
     <string name="livedInChicagoView">Have you lived in the city of Chicago for atleast 30 days?</string>
     <string name="q2YesButton">Yes</string>
     <string name="q2NoButton">No</string>
+
+    <string-array name="rep_names">
+        <item>Jesus Garcia</item>
+        <item>Robin Kelly</item>
+        <item>Edward M. Burke</item>
+        <item>Roberto Maldonado</item>
+        <item>Rahm Emanuel</item>
+        <item>Brian Hopkins</item>
+        <item>Pat Dowell</item>
+        <item>Sophia King</item>
+    </string-array>
+    <string-array name="office_name">
+        <item>US representative</item>
+        <item>US representative</item>
+        <item>Alderman</item>
+        <item>Alderman</item>
+        <item>Mayor</item>
+        <item>Alderman</item>
+        <item>Alderman</item>
+        <item>Alderman</item>
+    </string-array>
+    <string-array name="political_party">
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+    </string-array>
+    <string-array name="website">
+        <item>chuygarcia.house.gov</item>
+        <item>robinkelly.house.gov</item>
+        <item>edwardburke2019.com</item>
+        <item>robertomaldonado.com</item>
+        <item>chicago.gov/city/en/depts/mayor.html</item>
+        <item>aldermanhopkins.com</item>
+        <item>citizensforpatdowell.com</item>
+        <item>aldsophiaking.com</item>
+    </string-array>
+    <string-array name="email">
+        <item>press@chuygarcia.org</item>
+        <item>NA</item>
+        <item>ward14@cityofchicago.org</item>
+        <item>ward26@cityofchicago.org</item>
+        <item>NA</item>
+        <item>ward02@cityofchicago.org</item>
+        <item>ward03@cityofchicago.org</item>
+        <item>ward04@cityofchicago.org</item>
+    </string-array>
+    <string-array name="phone_numer">
+        <item>(773) 342-0774</item>
+        <item>(708) 679-0078</item>
+        <item>(773) 471-1414</item>
+        <item>(773) 395-0143</item>
+        <item>NA</item>
+        <item>(312) 643-2299</item>
+        <item>(773) 373-9273</item>
+        <item>(773) 536-8103</item>
+    </string-array>
 </resources>

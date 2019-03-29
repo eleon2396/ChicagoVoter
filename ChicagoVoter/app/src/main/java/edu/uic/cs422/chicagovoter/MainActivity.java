@@ -102,6 +102,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         startVoterActivity();
+        initializeRepButtonActivity();
+    }
+
+    private void initializeRepButtonActivity()
+    {
+        Button repButton = (Button) findViewById(R.id.my_representatives_button);
+        repButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), RepActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void startVoterActivity(){
