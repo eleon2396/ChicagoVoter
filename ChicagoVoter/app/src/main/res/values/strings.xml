@@ -90,4 +90,14 @@
         <item>(773) 373-9273</item>
         <item>(773) 536-8103</item>
     </string-array>
+    <string-array name="is_running_again">
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+    </string-array>
 </resources>
