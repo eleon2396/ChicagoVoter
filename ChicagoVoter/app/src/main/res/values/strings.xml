@@ -30,6 +30,9 @@
     <string name="eligibleView">Your eligibility will display here.</string>
     <string name="pollingStationTextView">The nearest Polling Station.</string>
     <string name="goToMapsView">Open maps</string>
+    <string name="Citizen">U.S Citizen</string>
+    <string name="GreenCard">Green Card Holder</string>
+    <string name="Undoc">Undocumented</string>
 
     <string-array name="Statuses">
         <item>U.S Citizen</item>

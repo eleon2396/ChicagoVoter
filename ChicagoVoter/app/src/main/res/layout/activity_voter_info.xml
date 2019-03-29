@@ -146,10 +146,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.556" />
 
     <TextView
         android:id="@+id/livedInChicagoTextView"
@@ -169,7 +169,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintVertical_bias="0.706" />
 
     <Button
         android:id="@+id/q1YesButton"
@@ -250,10 +250,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892" />
+        app:layout_constraintVertical_bias="0.919" />
 
     <TextView
         android:id="@+id/pollingStationTextView"
@@ -273,7 +273,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892" />
+        app:layout_constraintVertical_bias="0.919" />
 
     <Button
         android:id="@+id/goToMapsButton"
@@ -288,25 +288,64 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.719"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pollingStationTextView"
-        app:layout_constraintVertical_bias="0.703" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ListView
-        android:id="@+id/statusListView"
-        android:layout_width="395dp"
-        android:layout_height="135dp"
+    <RadioGroup
+        android:layout_width="321dp"
+        android:layout_height="145dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
-        android:footerDividersEnabled="true"
         app:layout_constraintBottom_toTopOf="@+id/convictedTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/citizenshipTextView"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintTop_toBottomOf="@+id/citizenshipTextView">
+
+        <RadioButton
+            android:id="@+id/undocRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Undoc"
+            app:layout_constraintBottom_toTopOf="@+id/convictedTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/citizenshipTextView"
+            app:layout_constraintVertical_bias="0.836" />
+
+        <RadioButton
+            android:id="@+id/citizenRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Citizen"
+            app:layout_constraintBottom_toTopOf="@+id/undocRadioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/citizenshipTextView"
+            app:layout_constraintVertical_bias="0.047" />
+
+        <RadioButton
+            android:id="@+id/greenRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/GreenCard"
+            app:layout_constraintBottom_toTopOf="@+id/undocRadioButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/citizenshipTextView"
+            app:layout_constraintVertical_bias="0.976" />
+
+    </RadioGroup>
+
 </android.support.constraint.ConstraintLayout>

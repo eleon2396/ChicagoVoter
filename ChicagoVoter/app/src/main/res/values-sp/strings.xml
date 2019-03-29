@@ -30,4 +30,7 @@
     <string name="eligibleView">Su elegibilidad se mostrará aquí.</string>
     <string name="pollingStationTextView">El centro de votación más cercano.</string>
     <string name="goToMapsView">Abrir mapas</string>
+    <string name="Citizen">Ciudadano estadounidense</string>
+    <string name="GreenCard">Titular de la tarjeta verde</string>
+    <string name="Undoc">Indocumentado</string>
 </resources>
