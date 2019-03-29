@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -83,7 +84,17 @@ public class VoterInfoActivity extends AppCompatActivity {
     private void handlePollingMap(){
         Button pollingButton = (Button)findViewById(R.id.goToMapsButton);
         final TextView address = (TextView)findViewById(R.id.addressEditText);
-        
+        address.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                
+
+
+                return true;
+            }
+        });
+
+
         pollingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
