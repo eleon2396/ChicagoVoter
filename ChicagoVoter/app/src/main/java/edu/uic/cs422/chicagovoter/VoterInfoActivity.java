@@ -66,23 +66,10 @@ public class VoterInfoActivity extends AppCompatActivity {
         }
 
         handleSurvey();
+        handlePollingMap();
     }
 
     private void handleSurvey(){
-
-        EditText nameText = (EditText)findViewById(R.id.nameEditText);
-        EditText addressText = (EditText)findViewById(R.id.addressEditText);
-
-
-
-        //All four options
-
-/*        Button q1Yes = (Button)findViewById(R.id.q1YesButton);
-        Button q1No = (Button)findViewById(R.id.q1NoButton);
-        Button q2Yes = (Button)findViewById(R.id.q2YesButton);
-        Button q2No = (Button)findViewById(R.id.q2NoButton);*/
-
-
 
         Button submitBTN = (Button)findViewById(R.id.SubmitButton);
         submitBTN.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +79,40 @@ public class VoterInfoActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void handlePollingMap(){
+        Button pollingButton = (Button)findViewById(R.id.goToMapsButton);
+        final TextView address = (TextView)findViewById(R.id.addressEditText);
+        
+        pollingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Log.i("CHECK", "THIS WORKS");
+                //pollingStation.setText(address.getText());
+                String s = address.getText().toString();
+                if(checkString(s)){
+                    updatePollingStation(s);
+                }
+
+            }
+        });
+    }
+    private void updatePollingStation(String address){
+        final TextView pollingStation = (TextView)findViewById(R.id.pollingStationTextView);
+        pollingStation.setText(address);
+    }
+    //Assume correct input
+    private boolean checkString(String address){
+
+        if(address.isEmpty()){
+            return false;
+        }
+        else{
+            Log.i("CHECK2", address);
+            return true;
+        }
+    }
+
 
     private void getAllInfoFromRadioGroups(){
         RadioGroup group1 = (RadioGroup)findViewById(R.id.statusRadioGroup);
