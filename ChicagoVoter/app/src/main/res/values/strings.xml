@@ -27,4 +27,13 @@
     <string name="livedInChicagoView">Have you lived in the city of Chicago for atleast 30 days?</string>
     <string name="q2YesButton">Yes</string>
     <string name="q2NoButton">No</string>
+    <string name="eligibleView">Your eligibility will display here.</string>
+    <string name="pollingStationTextView">The nearest Polling Station.</string>
+    <string name="goToMapsView">Open maps</string>
+
+    <string-array name="Statuses">
+        <item>U.S Citizen</item>
+        <item>Green Card Holder</item>
+        <item>Undocumented</item>
+    </string-array>
 </resources>

@@ -27,4 +27,7 @@
     <string name="livedInChicagoView">¿Has vivido en la ciudad de Chicago por al menos 30 días?</string>
     <string name="q2YesButton">Si</string>
     <string name="q2NoButton">No</string>
+    <string name="eligibleView">Su elegibilidad se mostrará aquí.</string>
+    <string name="pollingStationTextView">El centro de votación más cercano.</string>
+    <string name="goToMapsView">Abrir mapas</string>
 </resources>

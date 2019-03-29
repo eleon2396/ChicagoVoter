@@ -10,6 +10,7 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -19,6 +20,9 @@ public class VoterInfoActivity extends AppCompatActivity {
     //Broadcast receiver and filter that will be used
     private BroadcastReceiver mReceiver1;
     private IntentFilter mfilter1;
+
+    private String[] myStatuses;
+    private ListView mainList;
 
     private void receiver(){
         mfilter1 = new IntentFilter(SETTINGS_INTENT);
@@ -53,6 +57,14 @@ public class VoterInfoActivity extends AppCompatActivity {
             String language = getLan.getStringExtra("com.LAN");
             setAppLocale(language, getApplicationContext());
         }
+
+        mainList = (ListView)findViewById(R.id.statusListView);
+        myStatuses = getResources().getStringArray(R.array.Statuses);
+
+        myItemAdapter adapter = new myItemAdapter(myStatuses);
+        mainList.setAdapter(adapter);
+
+
 
     }
 }
