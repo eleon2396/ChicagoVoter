@@ -7,6 +7,7 @@
     <string name="app_title"><b>Votante De Chicago</b></string>
     <string name="settings_string"><b>Ajustes</b></string>
     <string name="representatives_string"><b>Representantes</b></string>
+    <string name="current_events"><b>Eventos actuales</b></string>
     <string name="Test"><b>ESTE ES UN EXAMEN1</b></string>
 
     <string name="Notifications">Notificaciones</string>
@@ -29,4 +30,6 @@
     <string name="livedInChicagoView">¿Has vivido en la ciudad de Chicago por al menos 30 días?</string>
     <string name="q2YesButton">Si</string>
     <string name="q2NoButton">No</string>
+    <string name="election_text"><font size="20">proxima elección:</font> <font size="25"><b>3 dias</b></font></string>
+
 </resources>

@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="action_bar_color">#99274D</color>
+    <color name="timer_banner">#50c3e0</color>
 </resources>

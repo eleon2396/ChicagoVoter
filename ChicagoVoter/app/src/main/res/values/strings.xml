@@ -7,6 +7,7 @@
     <string name="app_title"><b>Chicago Voter</b></string>
     <string name="settings_string"><b>Settings</b></string>
     <string name="representatives_string"><b>Representatives</b></string>
+    <string name="current_events"><b>Current Events</b></string>
     <string name="Test"><b>THIS IS A TEST1</b></string>
 
     <string name="Notifications">Notifications</string>
@@ -26,9 +27,10 @@
     <string name="citizenshipView">Have you ever been convicted of a felony?</string>
     <string name="q1YesButton">Yes</string>
     <string name="q1NoButton">No</string>
-    <string name="livedInChicagoView">Have you lived in the city of Chicago for atleast 30 days?</string>
+    <string name="livedInChicagoView">Have you lived in the city of Chicago for at least 30 days?</string>
     <string name="q2YesButton">Yes</string>
     <string name="q2NoButton">No</string>
+    <string name="election_text"><font size="20">Next Election:</font> <font size="25"><b>3 Days</b></font></string>
 
     <string-array name="rep_names">
         <item>Jesus Garcia</item>

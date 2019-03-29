@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         startVoterActivity();
         initializeRepButtonActivity();
+        initializeCurrentEventsActivity();
     }
 
     private void initializeRepButtonActivity()
@@ -129,7 +130,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    private void initializeCurrentEventsActivity()
+    {
+        Button currButton = (Button) findViewById(R.id.current_events_button);
+        currButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), CurrentEventsActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 
 }
