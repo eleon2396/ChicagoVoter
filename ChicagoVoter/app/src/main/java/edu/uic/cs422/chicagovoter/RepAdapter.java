@@ -33,6 +33,10 @@ public class RepAdapter extends BaseAdapter {
         this.pContext = pContext;
     }
 
+    public void updateListview(List<Representatives> newList)
+    {
+        repInfo = newList;
+    }
 
     @Override
     public int getCount()

@@ -41,15 +41,40 @@
 
     <TextView
         android:id="@+id/next_election_banner"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
+        android:layout_width="397dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/timer_banner"
-        android:paddingLeft="10dp"
+        android:paddingLeft="70dp"
         android:paddingTop="10dp"
+        android:paddingBottom="5dp"
         android:text="@string/election_text" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/candidates_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/events_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/current_events_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
