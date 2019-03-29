@@ -58,11 +58,7 @@ public class VoterInfoActivity extends AppCompatActivity {
             setAppLocale(language, getApplicationContext());
         }
 
-//        mainList = (ListView)findViewById(R.id.statusListView);
-//        myStatuses = getResources().getStringArray(R.array.Statuses);
-//
-//        myItemAdapter adapter = new myItemAdapter(myStatuses);
-//        mainList.setAdapter(adapter);
+
 
 
 
