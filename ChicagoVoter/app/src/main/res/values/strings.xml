@@ -31,6 +31,8 @@
     <string name="q2YesButton">Yes</string>
     <string name="q2NoButton">No</string>
     <string name="election_text"><font size="20">Next Election:</font> <font size="25"><b>3 Days</b></font></string>
+    <string name="events_tab_button">Events</string>
+    <string name="candidates_tab_button">Candidates</string>
 
     <string-array name="rep_names">
         <item>Jesus Garcia</item>
@@ -101,5 +103,75 @@
         <item>Yes</item>
         <item>Yes</item>
         <item>Yes</item>
+    </string-array>
+
+    <string-array name="event_name">
+        <item>Chicago Mayoral Forum</item>
+        <item>2020 Presidential Candidate: Julián Castro</item>
+        <item>TRUMP 2020 GALA</item>
+        <item>It"'"s a Runoff in the 5th Ward</item>
+        <item>GOTV Flyering in Pilsen</item>
+    </string-array>
+    <string-array name="event_date">
+        <item>Fri, March 29, 2019, 6:00 PM – 7:00 PM</item>
+        <item>Tue, April 16, 2019, 5:30 PM – 6:45 PM</item>
+        <item>Sat, July 6, 2019, 6:00 PM – 11:30 PM</item>
+        <item>Sat, March 30, 2019, 11:00 AM – 12:30 PM</item>
+        <item>Friday March 29 5-7 pm</item>
+    </string-array>
+    <string-array name="event_location">
+        <item>9501 S. King Drive, Chicago, IL 60628</item>
+        <item>1212 E 59th St, Chicago, IL 60637</item>
+        <item>401 North Wabash Avenue, Chicago, IL 60611</item>
+        <item>1818 E. 71st Street, 202, CHICAGO, IL 60649-1913</item>
+        <item>1504 W 18th St</item>
+    </string-array>
+    <string-array name="description_events">
+        <item>Join us for a one-hour, live broadcast mayoral debate from Chicago State University. The format will be a two-candidate, moderated round table with audience participation.</item>
+        <item>Join the IOP as we welcome Democratic presidential candidate Julián Castro, former U.S. Secretary of Housing and Urban Development, for a wide-ranging conversation on the future of American politics, the Democratic Party, and more.</item>
+        <item>Please join us to celebrate the upcoming Campaign to re-elect President Trump at our Trump 2020 GALA at the Trump International Hotel in Chicago for a night to remember. You wont want to miss this.</item>
+        <item>With the Obama Presidential Center and Tiger Woods Golf course without a Community Benefits Agreement, the race for Alderman in 5th Ward has brought South Shore front and center. What"'"s at stake? Who should you vote for? What"'"s In it for South Shore? What are the candidate"'"s position on a CBA, vision for economic development, and public safety?</item>
+        <item>Flyering for Lori Lightfoot</item>
+    </string-array>
+
+    <string-array name="candidate_names">
+        <item>Alexander Acevedo</item>
+        <item>Byron Sigcho Lopez</item>
+        <item>Melissa Conyears-Ervin</item>
+        <item>Ameya Pawar</item>
+        <item>Toni Preckwinkle</item>
+        <item>Lori Lightfoot</item>
+    </string-array>
+    <string-array name="running_for_office">
+        <item>Alderman</item>
+        <item>Alderman</item>
+        <item>Treasurer</item>
+        <item>Treasurer</item>
+        <item>Mayor</item>
+        <item>Mayor</item>
+    </string-array>
+    <string-array name="candidate_political_party">
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+    </string-array>
+    <string-array name="candidate_contact_info">
+        <item>nick@alexfor25.com</item>
+        <item>teamsigcho@gmail.com</item>
+        <item>conyearservin.com/contact-us-2</item>
+        <item>info@chicago47.org</item>
+        <item>press@toniforchicago.com</item>
+        <item>info@lightfootforchicago.com</item>
+    </string-array>
+    <string-array name="candidate_website">
+        <item>alexfor25.com</item>
+        <item>sigchofor25.com/</item>
+        <item>conyearservin.com/</item>
+        <item>chicago47.org/</item>
+        <item>toniforchicago.com/</item>
+        <item>lightfootforchicago.com/</item>
     </string-array>
 </resources>

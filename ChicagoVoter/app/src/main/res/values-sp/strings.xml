@@ -31,5 +31,7 @@
     <string name="q2YesButton">Si</string>
     <string name="q2NoButton">No</string>
     <string name="election_text"><font size="20">proxima elección:</font> <font size="25"><b>3 dias</b></font></string>
+    <string name="events_tab_button">Eventos</string>
+    <string name="candidates_tab_button">Candidatos</string>
 
 </resources>
