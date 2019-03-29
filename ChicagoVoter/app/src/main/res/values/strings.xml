@@ -36,11 +36,21 @@
 
     <string name="SubmitBTN">Submit</string>
 
-    <string-array name="Statuses">
-        <item>U.S Citizen</item>
-        <item>Green Card Holder</item>
-        <item>Undocumented</item>
+    <string-array name="pollingLocation">
+        <item>2242 S Damen Ave, Chicago, IL 60608</item>
+        <item>1895 S Loomis St, Chicago, IL 60608</item>
+        <item>1354 S Morgan St, Chicago, IL 60608</item>
+        <item>1826 N Francisco Ave, Chicago IL, 60608</item>
+        <item>1148 N Honore St, Chicago IL, 60608 </item>
+        <item>2150 N California Ave, Chicago IL, 60608</item>
+        <item>2451 N Sacramento Ave, Chicago IL, 60608</item>
+        <item>2010 N Central Park Ave, Chicago IL, 60608</item>
+        <item>2367 W Logan Bv, Chicago IL, 60608</item>
+        <item>838 N Noble St, Chicago IL, 60608</item>
     </string-array>
+
+
+
 
 
 </resources>

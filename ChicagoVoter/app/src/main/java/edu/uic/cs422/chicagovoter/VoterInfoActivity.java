@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
 
+import org.w3c.dom.Text;
+
 import java.util.Locale;
+import java.util.Random;
 
 public class VoterInfoActivity extends AppCompatActivity {
     private static final String SETTINGS_INTENT="com.example.eleon.SETTINGS";
@@ -29,7 +33,7 @@ public class VoterInfoActivity extends AppCompatActivity {
     private BroadcastReceiver mReceiver1;
     private IntentFilter mfilter1;
 
-    private String[] myStatuses;
+    private String[] pollingStations;
     private ListView mainList;
 
     private void receiver(){
@@ -54,7 +58,7 @@ public class VoterInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_voter_info);
 
         receiver();
-
+        pollingStations = getResources().getStringArray(R.array.pollingLocation);
         Intent intent = getIntent();
         String check = intent.getStringExtra("com.CHECK");
         if(check == null){
@@ -82,15 +86,25 @@ public class VoterInfoActivity extends AppCompatActivity {
     }
 
     private void handlePollingMap(){
-        Button pollingButton = (Button)findViewById(R.id.goToMapsButton);
+        final Button pollingButton = (Button)findViewById(R.id.goToMapsButton);
         final TextView address = (TextView)findViewById(R.id.addressEditText);
+        final TextView pollingStation = (TextView) findViewById(R.id.pollingStationTextView);
+
         address.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                
 
+                if(event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if(event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                        String s = address.getText().toString();
+                        String polling = getPollingLocation();
 
-                return true;
+                        updatePollingStation(s, polling);
+                        return true;
+                    }
+                }
+
+                return false;
             }
         });
 
@@ -98,19 +112,49 @@ public class VoterInfoActivity extends AppCompatActivity {
         pollingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Log.i("CHECK", "THIS WORKS");
-                //pollingStation.setText(address.getText());
                 String s = address.getText().toString();
-                if(checkString(s)){
-                    updatePollingStation(s);
+                String temp = pollingStation.getText().toString();
+                String found = "";
+
+                for(int i = 0; i < pollingStations.length; i++){
+                    if(pollingStations[i] == temp){
+                        found = temp;
+                    }
                 }
 
+                updateMapsButton(s, found);
             }
         });
     }
-    private void updatePollingStation(String address){
-        final TextView pollingStation = (TextView)findViewById(R.id.pollingStationTextView);
-        pollingStation.setText(address);
+
+
+
+    private String getPollingLocation(){
+        Random r = new Random();
+        int randomNum = r.nextInt(9 - 0) + 0;
+
+
+        return pollingStations[randomNum];
+    }
+
+    private void updateMapsButton(String address, String polling){
+        if(checkString(address)){
+            Uri pollingAddress = Uri.parse("geo:37.7749,-122.4192?q=" + Uri.encode(polling));
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, pollingAddress );
+            mapIntent.setPackage("com.google.android.apps.maps");
+            startActivity(mapIntent);
+
+        }
+    }
+
+
+    private void updatePollingStation(String address, String polling){
+
+        if(checkString(address)) {
+
+            final TextView pollingStation = (TextView) findViewById(R.id.pollingStationTextView);
+            pollingStation.setText(polling);
+        }
     }
     //Assume correct input
     private boolean checkString(String address){
@@ -164,8 +208,6 @@ public class VoterInfoActivity extends AppCompatActivity {
 
         RadioButton r = (RadioButton) group.getChildAt(idx);
         String selectedtext = r.getText().toString();
-
-        Log.i("TEST1", selectedtext);
         return selectedtext;
     }
 
