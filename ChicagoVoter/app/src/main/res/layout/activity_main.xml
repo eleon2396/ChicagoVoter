@@ -49,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@android:color/darker_gray"
         android:text="@string/voter_information_string" />
 
     <Button style="@style/Widget.AppCompat.Button.Borderless"

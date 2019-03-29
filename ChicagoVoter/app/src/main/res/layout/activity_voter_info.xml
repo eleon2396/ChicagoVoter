@@ -295,11 +295,12 @@
 
     <RadioGroup
         android:layout_width="321dp"
-        android:layout_height="145dp"
+        android:layout_height="156dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/convictedTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -314,6 +315,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/Undoc"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/convictedTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -322,13 +324,14 @@
 
         <RadioButton
             android:id="@+id/citizenRadioButton"
-            android:layout_width="130dp"
+            android:layout_width="176dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/Citizen"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/undocRadioButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/citizenshipTextView"
@@ -336,13 +339,14 @@
 
         <RadioButton
             android:id="@+id/greenRadioButton"
-            android:layout_width="161dp"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/GreenCard"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/undocRadioButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/citizenshipTextView"
