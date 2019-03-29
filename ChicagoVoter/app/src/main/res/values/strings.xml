@@ -22,8 +22,8 @@
     <string name="EnterAddress">Enter your address</string>
     <string name="citizenShipView">What is your current citizenship status?</string>
     <string name="citizenshipView">Have you ever been convicted of a felony?</string>
-    <string name="q1YesButton">Yes</string>
-    <string name="q1NoButton">No</string>
+    <string name="YesButton">Yes</string>
+    <string name="NoButton">No</string>
     <string name="livedInChicagoView">Have you lived in the city of Chicago for atleast 30 days?</string>
     <string name="q2YesButton">Yes</string>
     <string name="q2NoButton">No</string>
@@ -33,6 +33,8 @@
     <string name="Citizen">U.S Citizen</string>
     <string name="GreenCard">Green Card Holder</string>
     <string name="Undoc">Undocumented</string>
+
+    <string name="SubmitBTN">Submit</string>
 
     <string-array name="Statuses">
         <item>U.S Citizen</item>

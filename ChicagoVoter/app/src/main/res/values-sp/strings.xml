@@ -22,8 +22,8 @@
     <string name="EnterAddress">Ingrese su dirección</string>
     <string name="citizenShipView">¿Cuál es su estado de ciudadanía actual?</string>
     <string name="citizenshipView">¿Alguna vez has sido condenado por un delito grave?</string>
-    <string name="q1YesButton">Si</string>
-    <string name="q1NoButton">No</string>
+    <string name="YesButton">Si</string>
+    <string name="NoButton">No</string>
     <string name="livedInChicagoView">¿Has vivido en la ciudad de Chicago por al menos 30 días?</string>
     <string name="q2YesButton">Si</string>
     <string name="q2NoButton">No</string>
@@ -33,4 +33,6 @@
     <string name="Citizen">Ciudadano estadounidense</string>
     <string name="GreenCard">Titular de la tarjeta verde</string>
     <string name="Undoc">Indocumentado</string>
+
+    <string name="SubmitBTN">Enviar</string>
 </resources>

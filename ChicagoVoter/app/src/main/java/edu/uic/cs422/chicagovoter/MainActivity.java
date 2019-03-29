@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String check = intent.getStringExtra("com.CHECK");
         if(check == null){
-            Toast.makeText(getApplicationContext(), "THIS IS EMPTY", Toast.LENGTH_LONG).show();
+
         }
         else{
             Intent getLan = getIntent();
