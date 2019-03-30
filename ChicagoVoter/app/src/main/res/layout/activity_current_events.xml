@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CurrentEventsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/curr_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@android:color/holo_red_dark"
+        android:elevation="4dp"
+        android:gravity="center_vertical|start">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="10dp"
+            android:text="@string/current_events"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/current_events_edittext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/resizer"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/next_election_banner"
+        android:layout_width="397dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/timer_banner"
+        android:paddingLeft="70dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/election_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/candidates_button"
+            style="@style/candidateTheme.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/candidates_tab_button" />
+
+        <Button
+            android:id="@+id/events_button"
+            style="@style/candidateTheme.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/events_tab_button" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/current_events_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

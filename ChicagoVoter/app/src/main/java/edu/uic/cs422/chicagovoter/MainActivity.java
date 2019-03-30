@@ -102,6 +102,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         startVoterActivity();
+        initializeRepButtonActivity();
+        initializeCurrentEventsActivity();
+    }
+
+    private void initializeRepButtonActivity()
+    {
+        Button repButton = (Button) findViewById(R.id.my_representatives_button);
+        repButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), RepActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void startVoterActivity(){
@@ -115,7 +130,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    private void initializeCurrentEventsActivity()
+    {
+        Button currButton = (Button) findViewById(R.id.current_events_button);
+        currButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), CurrentEventsActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 
 }

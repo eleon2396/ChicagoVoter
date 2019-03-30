@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="action_bar_color">#99274D</color>
+    <color name="timer_banner">#50c3e0</color>
+    <color name="buttonText">#181819</color>
+    <color name="buttonBackground">#e3e9f2</color>
+    <color name="buttonPressedBackground">#c0c9d6</color>
 </resources>
