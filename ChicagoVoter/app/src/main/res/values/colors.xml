@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#00CFCFCF</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="action_bar_color">#99274d</color>
+    <color name="action_bar_color">#99274D</color>
+    <color name="timer_banner">#50c3e0</color>
+    <color name="buttonText">#181819</color>
+    <color name="buttonBackground">#e3e9f2</color>
+    <color name="buttonPressedBackground">#c0c9d6</color>
 </resources>

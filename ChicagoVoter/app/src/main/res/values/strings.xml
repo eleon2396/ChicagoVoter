@@ -6,4 +6,199 @@
     <string name="home_desc">The home screen icon indicates that the user is currently in the home activity</string>
     <string name="app_title"><b>Chicago Voter</b></string>
     <string name="settings_string"><b>Settings</b></string>
+    <string name="representatives_string"><b>Representatives</b></string>
+    <string name="current_events"><b>Current Events</b></string>
+    <string name="Test"><b>THIS IS A TEST1</b></string>
+
+    <string name="Notifications">Notifications</string>
+    <string name="Switch">Allow Push Notifications</string>
+    <string name="Accessibility">Accessibility</string>
+    <string name="ChangeToSpan">Change to Spanish</string>
+    <string name="ChangeToEng">Change to English</string>
+    <string name="TextSize">Change Text Size</string>
+    <string name="autofill_rep_text">find representative</string>
+
+    <string name="VoterInfo">Voter Information</string>
+    <string name="nameView">Name:</string>
+    <string name="EnterName">Enter your name</string>
+    <string name="addressView">Address:</string>
+    <string name="EnterAddress">Enter your address</string>
+    <string name="citizenShipView">What is your current citizenship status?</string>
+    <string name="citizenshipView">Have you ever been convicted of a felony?</string>
+
+    <string name="YesButton">Yes</string>
+    <string name="NoButton">No</string>
+    <string name="livedInChicagoView">Have you lived in the city of Chicago for atleast 30 days?</string>
+    <string name="q2YesButton">Yes</string>
+    <string name="q2NoButton">No</string>
+    <string name="eligibleView">Your eligibility will display here.</string>
+    <string name="pollingStationTextView">The nearest Polling Station.</string>
+    <string name="goToMapsView">Open maps</string>
+    <string name="Citizen">U.S Citizen</string>
+    <string name="GreenCard">Green Card Holder</string>
+    <string name="Undoc">Undocumented</string>
+
+    <string name="SubmitBTN">Submit</string>
+
+    <string-array name="pollingLocation">
+        <item>2242 S Damen Ave, Chicago, IL 60608</item>
+        <item>1895 S Loomis St, Chicago, IL 60608</item>
+        <item>1354 S Morgan St, Chicago, IL 60608</item>
+        <item>1826 N Francisco Ave, Chicago IL, 60608</item>
+        <item>1148 N Honore St, Chicago IL, 60608 </item>
+        <item>2150 N California Ave, Chicago IL, 60608</item>
+        <item>2451 N Sacramento Ave, Chicago IL, 60608</item>
+        <item>2010 N Central Park Ave, Chicago IL, 60608</item>
+        <item>2367 W Logan Bv, Chicago IL, 60608</item>
+        <item>838 N Noble St, Chicago IL, 60608</item>
+    </string-array>
+
+
+
+
+    <string name="election_text"><font size="20">Next Election:</font> <font size="25"><b>3 Days</b></font></string>
+    <string name="events_tab_button">Events</string>
+    <string name="candidates_tab_button">Candidates</string>
+
+    <string-array name="rep_names">
+        <item>Jesus Garcia</item>
+        <item>Robin Kelly</item>
+        <item>Edward M. Burke</item>
+        <item>Roberto Maldonado</item>
+        <item>Rahm Emanuel</item>
+        <item>Brian Hopkins</item>
+        <item>Pat Dowell</item>
+        <item>Sophia King</item>
+    </string-array>
+    <string-array name="office_name">
+        <item>US representative</item>
+        <item>US representative</item>
+        <item>Alderman</item>
+        <item>Alderman</item>
+        <item>Mayor</item>
+        <item>Alderman</item>
+        <item>Alderman</item>
+        <item>Alderman</item>
+    </string-array>
+    <string-array name="political_party">
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+        <item>Democrat</item>
+    </string-array>
+    <string-array name="website">
+        <item>chuygarcia.house.gov</item>
+        <item>robinkelly.house.gov</item>
+        <item>edwardburke2019.com</item>
+        <item>robertomaldonado.com</item>
+        <item>chicago.gov/city/en/depts/mayor.html</item>
+        <item>aldermanhopkins.com</item>
+        <item>citizensforpatdowell.com</item>
+        <item>aldsophiaking.com</item>
+    </string-array>
+    <string-array name="email">
+        <item>press@chuygarcia.org</item>
+        <item>NA</item>
+        <item>ward14@cityofchicago.org</item>
+        <item>ward26@cityofchicago.org</item>
+        <item>NA</item>
+        <item>ward02@cityofchicago.org</item>
+        <item>ward03@cityofchicago.org</item>
+        <item>ward04@cityofchicago.org</item>
+    </string-array>
+    <string-array name="phone_numer">
+        <item>(773) 342-0774</item>
+        <item>(708) 679-0078</item>
+        <item>(773) 471-1414</item>
+        <item>(773) 395-0143</item>
+        <item>NA</item>
+        <item>(312) 643-2299</item>
+        <item>(773) 373-9273</item>
+        <item>(773) 536-8103</item>
+    </string-array>
+    <string-array name="is_running_again">
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="event_name">
+        <item>Chicago Mayoral Forum</item>
+        <item>2020 Presidential Candidate: Julián Castro</item>
+        <item>TRUMP 2020 GALA</item>
+        <item>It"'"s a Runoff in the 5th Ward</item>
+        <item>GOTV Flyering in Pilsen</item>
+    </string-array>
+    <string-array name="event_date">
+        <item>Fri, March 29, 2019, 6:00 PM – 7:00 PM</item>
+        <item>Tue, April 16, 2019, 5:30 PM – 6:45 PM</item>
+        <item>Sat, July 6, 2019, 6:00 PM – 11:30 PM</item>
+        <item>Sat, March 30, 2019, 11:00 AM – 12:30 PM</item>
+        <item>Friday March 29 5-7 pm</item>
+    </string-array>
+    <string-array name="event_location">
+        <item>9501 S. King Drive, Chicago, IL 60628</item>
+        <item>1212 E 59th St, Chicago, IL 60637</item>
+        <item>401 North Wabash Avenue, Chicago, IL 60611</item>
+        <item>1818 E. 71st Street, 202, CHICAGO, IL 60649-1913</item>
+        <item>1504 W 18th St</item>
+    </string-array>
+    <string-array name="description_events">
+        <item>Join us for a one-hour, live broadcast mayoral debate from Chicago State University. The format will be a two-candidate, moderated round table with audience participation.</item>
+        <item>Join the IOP as we welcome Democratic presidential candidate Julián Castro, former U.S. Secretary of Housing and Urban Development, for a wide-ranging conversation on the future of American politics, the Democratic Party, and more.</item>
+        <item>Please join us to celebrate the upcoming Campaign to re-elect President Trump at our Trump 2020 GALA at the Trump International Hotel in Chicago for a night to remember. You wont want to miss this.</item>
+        <item>With the Obama Presidential Center and Tiger Woods Golf course without a Community Benefits Agreement, the race for Alderman in 5th Ward has brought South Shore front and center. What"'"s at stake? Who should you vote for? What"'"s In it for South Shore? What are the candidate"'"s position on a CBA, vision for economic development, and public safety?</item>
+        <item>Flyering for Lori Lightfoot</item>
+    </string-array>
+
+    <string-array name="candidate_names">
+        <item>Alexander Acevedo</item>
+        <item>Byron Sigcho Lopez</item>
+        <item>Melissa Conyears-Ervin</item>
+        <item>Ameya Pawar</item>
+        <item>Toni Preckwinkle</item>
+        <item>Lori Lightfoot</item>
+    </string-array>
+    <string-array name="running_for_office">
+        <item>Alderman</item>
+        <item>Alderman</item>
+        <item>Treasurer</item>
+        <item>Treasurer</item>
+        <item>Mayor</item>
+        <item>Mayor</item>
+    </string-array>
+    <string-array name="candidate_political_party">
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+        <item>No Party</item>
+    </string-array>
+    <string-array name="candidate_contact_info">
+        <item>nick@alexfor25.com</item>
+        <item>teamsigcho@gmail.com</item>
+        <item>conyearservin.com/contact-us-2</item>
+        <item>info@chicago47.org</item>
+        <item>press@toniforchicago.com</item>
+        <item>info@lightfootforchicago.com</item>
+    </string-array>
+    <string-array name="candidate_website">
+        <item>alexfor25.com</item>
+        <item>sigchofor25.com/</item>
+        <item>conyearservin.com/</item>
+        <item>chicago47.org/</item>
+        <item>toniforchicago.com/</item>
+        <item>lightfootforchicago.com/</item>
+    </string-array>
+
 </resources>

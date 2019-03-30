@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Votante De Chicago</string>
+    <string name="current_events_string"><font size="25">Eventos actuales</font>\n\n<font size="12">Encuentra información sobre eventos políticos cerca de ti. Aprenda más sobre candidatos activos</font></string>
+    <string name="voter_information_string"><font size="25">Información para el votante</font>\n\n<font size="12">Averigüe si es elegible para votar y dónde puede votar</font></string>
+    <string name="my_reps_string"> <font size="25">Mis representantes</font>\n\n<font size="12">Encuentre más información sobre quiénes son sus funcionarios locales.</font></string>
+    <string name="home_desc">El icono de la pantalla de inicio indica que el usuario está actualmente en la actividad de inicio</string>
+    <string name="app_title"><b>Votante De Chicago</b></string>
+    <string name="settings_string"><b>Ajustes</b></string>
+    <string name="representatives_string"><b>Representantes</b></string>
+    <string name="current_events"><b>Eventos actuales</b></string>
+    <string name="Test"><b>ESTE ES UN EXAMEN1</b></string>
+
+    <string name="Notifications">Notificaciones</string>
+    <string name="Switch">Permitir notificaciones</string>
+    <string name="Accessibility">Accesibilidad</string>
+    <string name="ChangeToSpan">Cambia al español</string>
+    <string name="ChangeToEng">Cambia al Inglés</string>
+    <string name="TextSize">Cambiar Tamaño del Texto</string>
+    <string name="autofill_rep_text">buscar representante</string>
+
+    <string name="VoterInfo">Información para el votante</string>
+    <string name="nameView">Nombre:</string>
+    <string name="EnterName">Introduzca su nombre</string>
+    <string name="addressView">Dirección:</string>
+    <string name="EnterAddress">Ingrese su dirección</string>
+    <string name="citizenShipView">¿Cuál es su estado de ciudadanía actual?</string>
+    <string name="citizenshipView">¿Alguna vez has sido condenado por un delito grave?</string>
+    <string name="YesButton">Si</string>
+    <string name="NoButton">No</string>
+    <string name="livedInChicagoView">¿Has vivido en la ciudad de Chicago por al menos 30 días?</string>
+    <string name="q2YesButton">Si</string>
+    <string name="q2NoButton">No</string>
+
+    <string name="eligibleView">Su elegibilidad se mostrará aquí.</string>
+    <string name="pollingStationTextView">El centro de votación más cercano.</string>
+    <string name="goToMapsView">Abrir mapas</string>
+    <string name="Citizen">Ciudadano estadounidense</string>
+    <string name="GreenCard">Titular de la tarjeta verde</string>
+    <string name="Undoc">Indocumentado</string>
+
+    <string name="SubmitBTN">Enviar</string>
+
+    <string name="election_text"><font size="20">proxima elección:</font> <font size="25"><b>3 dias</b></font></string>
+    <string name="events_tab_button">Eventos</string>
+    <string name="candidates_tab_button">Candidatos</string>
+
+
+</resources>

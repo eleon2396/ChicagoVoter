@@ -10,26 +10,28 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/mToolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp"
-        android:background="@color/action_bar_color">
+        android:layout_height="60sp"
+        android:background="@android:color/holo_red_dark"
+        android:elevation="4dp">
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:src="@drawable/home"
             android:layout_margin="10dp"
             android:contentDescription="@string/home_desc"
-            />
+            android:src="@drawable/home" />
 
         <TextView
-            android:layout_width="170dp"
+            android:id="@+id/app"
+            android:layout_width="260dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:paddingStart="45dp"
             android:text="@string/app_title"
-            android:textSize="25dp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
+            android:textStyle="bold" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -41,11 +43,13 @@
         android:layout_weight="1"
         android:text="@string/current_events_string" />
 
-    <Button style="@style/Widget.AppCompat.Button.Borderless"
+    <Button
         android:id="@+id/voter_information_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@android:color/darker_gray"
         android:text="@string/voter_information_string" />
 
     <Button style="@style/Widget.AppCompat.Button.Borderless"
