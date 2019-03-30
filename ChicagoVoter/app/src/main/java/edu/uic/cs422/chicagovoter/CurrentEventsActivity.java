@@ -1,5 +1,7 @@
 package edu.uic.cs422.chicagovoter;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -91,6 +93,13 @@ public class CurrentEventsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ListView currEvents = (ListView) findViewById(R.id.current_events_listview);
                 currEvents.setAdapter(eventAdapter);
+
+                Button eventBtn = (Button) findViewById(R.id.events_button);
+                Button candidateBtn = (Button) findViewById(R.id.candidates_button);
+                eventBtn.setBackgroundColor(Color.parseColor("#c0c9d6"));
+                candidateBtn.setBackgroundColor(Color.parseColor("#e3e9f2"));
+                //eventBtn.getBackground().setColorFilter(Color.parseColor("#e3e9f2"), PorterDuff.Mode.DARKEN);
+                //candidateBtn.getBackground().setColorFilter(Color.parseColor("#c0c9d6"), PorterDuff.Mode.DARKEN);
             }
         });
     }
@@ -98,11 +107,17 @@ public class CurrentEventsActivity extends AppCompatActivity {
     public void setCandidatesListener()
     {
         Button candidateBtn = (Button) findViewById(R.id.candidates_button);
+        candidateBtn.setBackgroundColor(Color.parseColor("#c0c9d6"));
         candidateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ListView currEvents = (ListView) findViewById(R.id.current_events_listview);
                 currEvents.setAdapter(candidateAdapter);
+
+                Button eventBtn = (Button) findViewById(R.id.events_button);
+                Button candidateBtn = (Button) findViewById(R.id.candidates_button);
+                eventBtn.setBackgroundColor(Color.parseColor("#e3e9f2"));
+                candidateBtn.setBackgroundColor(Color.parseColor("#c0c9d6"));
             }
         });
     }

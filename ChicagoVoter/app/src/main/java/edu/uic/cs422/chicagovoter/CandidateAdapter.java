@@ -49,6 +49,7 @@ public class CandidateAdapter extends BaseAdapter
 
         ImageView candidateFace = (ImageView) convertView.findViewById(R.id.candidate_image);
         TextView candidateName = (TextView) convertView.findViewById(R.id.candidate_name_text_view);
+        TextView candidateRunningFor = (TextView) convertView.findViewById(R.id.candidate_running_for_text_view);
         TextView candidateParty = (TextView) convertView.findViewById(R.id.candidate_party_pos);
         TextView candidateContact = (TextView) convertView.findViewById(R.id.candidate_contact_info);
         TextView candidateWebsite = (TextView) convertView.findViewById(R.id.candidate_website);
@@ -60,6 +61,7 @@ public class CandidateAdapter extends BaseAdapter
         candidateParty.setText(item.partyAffiliation);
         candidateContact.setText(item.contact);
         candidateWebsite.setText(item.website);
+        candidateRunningFor.setText(item.officeRunningFor);
 
         return convertView;
     }
