@@ -50,7 +50,7 @@ public class VoterInfoActivity extends AppCompatActivity {
             conf.setLocale(new Locale(localCode.toLowerCase()));
         }
 
-        res.updateConfiguration(conf, dm);
+       // res.updateConfiguration(conf, dm);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
