@@ -10,9 +10,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -28,11 +31,12 @@ import java.util.Locale;
 import java.util.Random;
 
 public class VoterInfoActivity extends AppCompatActivity {
+    // * Broadcast receiver, filter, and string that will be used for changing the language in the app
     private static final String SETTINGS_INTENT="com.example.eleon.SETTINGS";
-    //Broadcast receiver and filter that will be used
     private BroadcastReceiver mReceiver1;
     private IntentFilter mfilter1;
 
+    // * Variable to hold all the polling stations
     private String[] pollingStations;
     private ListView mainList;
 
@@ -61,6 +65,11 @@ public class VoterInfoActivity extends AppCompatActivity {
         pollingStations = getResources().getStringArray(R.array.pollingLocation);
         Intent intent = getIntent();
         String check = intent.getStringExtra("com.CHECK");
+
+        Toolbar myTool = (Toolbar)findViewById(R.id.voter_toolbar);
+        setSupportActionBar(myTool);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         if(check == null){
            // Toast.makeText(getApplicationContext(), "THIS IS EMPTY", Toast.LENGTH_LONG).show();
         }
@@ -71,7 +80,29 @@ public class VoterInfoActivity extends AppCompatActivity {
         }
 
         handleSurvey();
-        handlePollingMap();
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.settings_action_items, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int id = item.getItemId();
+        switch (id)
+        {
+            case R.id.back_button:
+                finish();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void handleSurvey(){
@@ -81,6 +112,7 @@ public class VoterInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getAllInfoFromRadioGroups();
+                handlePollingMap();
             }
         });
     }
@@ -90,24 +122,9 @@ public class VoterInfoActivity extends AppCompatActivity {
         final TextView address = (TextView)findViewById(R.id.addressEditText);
         final TextView pollingStation = (TextView) findViewById(R.id.pollingStationTextView);
 
-        address.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-
-                if(event.getAction() == KeyEvent.ACTION_DOWN) {
-                    if(event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
-                        String s = address.getText().toString();
-                        String polling = getPollingLocation();
-
-                        updatePollingStation(s, polling);
-                        return true;
-                    }
-                }
-
-                return false;
-            }
-        });
-
+        String s = address.getText().toString();
+        String polling = getPollingLocation();
+        updatePollingStation(s, polling);
 
         pollingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +173,7 @@ public class VoterInfoActivity extends AppCompatActivity {
             pollingStation.setText(polling);
         }
     }
-    //Assume correct input
+    // * Assume correct input
     private boolean checkString(String address){
 
         if(address.isEmpty()){
@@ -210,6 +227,8 @@ public class VoterInfoActivity extends AppCompatActivity {
         String selectedtext = r.getText().toString();
         return selectedtext;
     }
+
+
 
 
 }

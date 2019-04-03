@@ -37,7 +37,7 @@
 
     <Button
         android:id="@+id/current_events_button"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"

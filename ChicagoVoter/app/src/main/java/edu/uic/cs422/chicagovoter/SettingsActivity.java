@@ -29,17 +29,18 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        // * Set up the toolbar with back button
         Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.settings_toolbar);
         setSupportActionBar(chicagoToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-
+        // * Set up the change language button for spanish
         Button changeToSpanishBTN = (Button)findViewById(R.id.changeToSpanishBTN);
         Button changeToEngBTN = (Button)findViewById(R.id.changeToEnglishBTN);
         changeToSpanishBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // * Change the app locale to spanish and broadcast to other activities, then finish
                 setAppLocale("sp");
                 sendLan("sp");
                 finish();
@@ -47,9 +48,11 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        // * Set up the change language button for english
         changeToEngBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // * Change the app locale to english and broadcast to other activities, the finish
                 setAppLocale("en");
                 sendLan("en");
                 finish();
@@ -57,7 +60,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
 
-        //Switch for Notifications but we havent set up yet what kind of notifactions, for now a Toast
+        // * Switch for Notifications but we havent set up yet what kind of notifactions, for now a Toast
         Switch notificationSwitch  = (Switch)findViewById(R.id.notificationSwitch);
         notificationSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -85,6 +88,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
+        // * Trigger events with the options item selected
         int id = item.getItemId();
         switch (id)
         {
@@ -99,16 +103,12 @@ public class SettingsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    // * This function will send out an ordered broadcast to the other activities so that they can change the language of the app
     private void sendLan(String language){
         Intent changeLan = new Intent(SETTINGS_INTENT);
         changeLan.putExtra("com.LAN",  language);
         sendOrderedBroadcast(changeLan, null);
     }
-
-//    @Override
-//    public void onBackPressed(){
-//        finish();
-//    }
 
 
     private void RestartActivity(){
@@ -118,6 +118,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
+    // * Function to change the app locale based on the string that is passed
     private void setAppLocale(String localCode){
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
