@@ -208,11 +208,11 @@ public class VoterInfoActivity extends AppCompatActivity {
                 eligibleView.setText("You are Eligible to VOTE!!");
             }
             else{
-                eligibleView.setText("NAH NIBBA!!");
+                eligibleView.setText("You are NOT Eligible to VOTE!!");
             }
         }
         else{
-            eligibleView.setText("NAH NIBBA!!");
+            eligibleView.setText("You are NOT Eligible to VOTE!!");
         }
     }
 
