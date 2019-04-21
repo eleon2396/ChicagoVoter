@@ -1,9 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".VoterInfoActivity2">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8BC34A"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:navigationIcon="@android:drawable/ic_media_previous"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/VoterInfo" />
+
+    <TextView
+        android:id="@+id/step2TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/step2"
+        android:textColor="#030103"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/citizenshupTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/citizenShipView"
+        android:textAlignment="center"
+        android:textColor="#090202"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:id="@+id/citizenshipRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/USCitizenRadioButton"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Citizen"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/undocumentedRadioGroup"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Undoc"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/residentRadioButton"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/GreenCard"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/felonyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/felonyView"
+        android:textAlignment="center"
+        android:textColor="#0E020F"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:id="@+id/felonyRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/yesRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/YesButton"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/noRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/NoButton"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/livediInChicagoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/livedInChicagoView"
+        android:textAlignment="center"
+        android:textColor="#0C0716"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:id="@+id/livedInChicagoRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/yesRadioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/YesButton"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/noRadioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/NoButton"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nextButton2"
+        style="@android:style/Widget.Holo.Button.Inset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nextButton"
+        android:textColor="#0B0616" />
+</LinearLayout>

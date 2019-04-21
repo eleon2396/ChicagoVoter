@@ -25,7 +25,7 @@
     <string name="addressView">Let\'s start with your Address:</string>
     <string name="EnterAddress">Enter your address</string>
     <string name="citizenShipView">What is your current citizenship status?</string>
-    <string name="citizenshipView">Have you ever been convicted of a felony?</string>
+    <string name="felonyView">Have you ever been convicted of a felony?</string>
 
     <string name="YesButton">Yes</string>
     <string name="NoButton">No</string>
@@ -42,6 +42,13 @@
     <string name="SubmitBTN">Submit</string>
     <string name="nextButton">Continue</string>
     <string name="step1">Step 1:</string>
+    <string name="step2">Step 2:</string>
+    <string name="results">Results:</string>
+    <string name="eligibleToVote">Are you Eligible to Vote?</string>
+    <string name="pollingStation">Your nearest Polling Station is:</string>
+    <string name="CanVote"> YES! You are eligible to Vote!</string>
+    <string name="CantVote"> NO! You are NOT eligible to Vote!</string>
+    <string name="END">Return to Home Page</string>
 
     <string-array name="pollingLocation">
         <item>2242 S Damen Ave, Chicago, IL 60608</item>
@@ -134,7 +141,6 @@
     </string-array>
 
 
-
     <string-array name="event_name">
         <item>Chicago Mayoral Forum</item>
         <item>2020 Presidential Candidate: Julián Castro</item>
@@ -170,7 +176,6 @@
         <item>https://www.eventbrite.com/e/its-a-runoff-in-the-5th-ward-tickets-58451396701#</item>
         <item>https://www.eventbrite.com/e/pilsen-alliance-20th-year-anniversary-celebration-unity-is-key-tickets-52764756808#</item>
     </string-array>
-
 
 
     <string-array name="candidate_names">

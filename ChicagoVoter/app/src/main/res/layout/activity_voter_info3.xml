@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VoterInfoActivity3">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8BC34A"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:navigationIcon="@android:drawable/ic_media_previous"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/VoterInfo" />
+
+    <TextView
+        android:id="@+id/lastStepTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/results"
+        android:textColor="#0E020F"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:id="@+id/eligibleToVoteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/eligibleToVote"
+        android:textColor="#02040E"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ableToVoteAnswerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="textview"
+        android:textAlignment="center"
+        android:textColor="#130408"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nearestPollingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pollingStation"
+        android:textColor="#010A0F"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pollingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#7A797C"
+        android:textColorLink="#009688"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/mapsButton"
+        style="@android:style/Widget.Holo.Button.Inset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/goToMapsView"
+        android:textColor="#0C030E"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/endButton"
+        style="@android:style/Widget.Holo.Button.Inset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/END"
+        android:textColor="#040D14"
+        android:textSize="18sp" />
+</LinearLayout>

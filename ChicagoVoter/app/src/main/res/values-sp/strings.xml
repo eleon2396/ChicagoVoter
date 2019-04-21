@@ -24,7 +24,7 @@
     <string name="addressView"> Empezamos con su Dirección:</string>
     <string name="EnterAddress">Ingrese su dirección</string>
     <string name="citizenShipView">¿Cuál es su estado de ciudadanía actual?</string>
-    <string name="citizenshipView">¿Alguna vez has sido condenado por un delito grave?</string>
+    <string name="felonyView">¿Alguna vez has sido condenado por un delito grave?</string>
     <string name="YesButton">Si</string>
     <string name="NoButton">No</string>
     <string name="livedInChicagoView">¿Has vivido en la ciudad de Chicago por al menos 30 días?</string>
@@ -41,6 +41,13 @@
     <string name="SubmitBTN">Enviar</string>
     <string name="nextButton">Continuar</string>
     <string name="step1">Paso 1:</string>
+    <string name="step2">Paso 2:</string>
+    <string name="results">Resultados:</string>
+    <string name="eligibleToVote">¿Eres elegible para votar?</string>
+    <string name="pollingStation">Su centro de votación más cercano es:</string>
+    <string name="CanVote"> ¡SÍ! Usted es elegible para votar!</string>
+    <string name="CantVote">¡NO eres elegible para votar!</string>
+    <string name="END">Regresar a la página principal</string>
 
     <string name="election_text"><font size="20">proxima elección:</font> <font size="25"><b>3 dias</b></font></string>
     <string name="events_tab_button">Eventos</string>

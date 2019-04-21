@@ -111,6 +111,7 @@ public class VoterInfoActivity extends AppCompatActivity {
             if(check){
                 Toast.makeText(getApplicationContext(), "THE ADDRESS IS VALID", Toast.LENGTH_LONG).show();
                 Intent step2Intent = new Intent(getApplicationContext(), VoterInfoActivity2.class);
+                step2Intent.putExtra("com.Address", address);
                 startActivity(step2Intent);
             }
             else{

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".VoterInfoActivity2"></activity>
+        <activity android:name=".VoterInfoActivity3"></activity>
+        <activity android:name=".VoterInfoActivity2" />
         <activity android:name=".CurrentEventsActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".VoterInfoActivity" />
