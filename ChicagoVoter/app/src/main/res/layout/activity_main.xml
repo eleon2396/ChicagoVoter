@@ -11,52 +11,35 @@
         android:id="@+id/mToolbar"
         android:layout_width="match_parent"
         android:layout_height="60sp"
-        android:background="@android:color/holo_red_dark"
-        android:elevation="4dp">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:contentDescription="@string/home_desc"
-            android:src="@drawable/home" />
-
-        <TextView
-            android:id="@+id/app"
-            android:layout_width="260dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:paddingStart="45dp"
-            android:text="@string/app_title"
-            android:textAppearance="@android:style/TextAppearance.Material.Headline"
-            android:textStyle="bold" />
-
-    </android.support.v7.widget.Toolbar>
+        android:background="#8BC34A"
+        android:elevation="4dp"
+        app:title="@string/app_title" />
 
     <Button
         android:id="@+id/current_events_button"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
-        android:layout_width="match_parent"
+        style="@android:style/Widget.Holo.Button.Inset"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="@string/current_events_string" />
+        android:text="@string/current_events_string"
+        android:textColor="#0F0404" />
 
     <Button
         android:id="@+id/voter_information_button"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@android:style/Widget.Holo.Button.Inset"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@android:color/darker_gray"
-        android:text="@string/voter_information_string" />
+        android:text="@string/voter_information_string"
+        android:textColor="#0F0404" />
 
-    <Button style="@style/Widget.AppCompat.Button.Borderless"
+    <Button
         android:id="@+id/my_representatives_button"
+        style="@android:style/Widget.Holo.Button.Inset"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="@string/my_reps_string" />
+        android:text="@string/my_reps_string"
+        android:textColor="#0F0404" />
 
 </LinearLayout>

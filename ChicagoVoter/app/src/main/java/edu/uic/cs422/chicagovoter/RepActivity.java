@@ -1,13 +1,17 @@
 package edu.uic.cs422.chicagovoter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -34,6 +38,7 @@ public class RepActivity extends AppCompatActivity {
     private Context mContext;
     private RepAdapter mAdapter;
     private ArrayList<Representatives> results;
+    private String[] repClickableSites;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +78,20 @@ public class RepActivity extends AppCompatActivity {
         // create the toolbar
         Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.rep_toolbar);
         setSupportActionBar(chicagoToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        chicagoToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // set listener for keypresses on the edit text search bar
         initializeEditText();
+
+        repClickableSites = getResources().getStringArray(R.array.rep_clickable_website);
+        repList.setOnItemClickListener(listListener);
     }
 
     public void initializeEditText()
@@ -108,29 +123,16 @@ public class RepActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
+    // create a new activity that shows the full image of the phone
+    private ListView.OnItemClickListener listListener = new ListView.OnItemClickListener()
     {
-        getMenuInflater().inflate(R.menu.settings_action_items, menu);
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        int id = item.getItemId();
-        switch (id)
+        @Override
+        public void onItemClick(AdapterView<?> parent, View v, int position, long id)
         {
-            case R.id.back_button:
-                finish();
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(repClickableSites[position]));
+            startActivity(intent);
         }
+    };
 
-
-        return super.onOptionsItemSelected(item);
-    }
 
 }

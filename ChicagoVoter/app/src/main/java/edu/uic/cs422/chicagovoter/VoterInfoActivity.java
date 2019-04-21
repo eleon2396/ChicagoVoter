@@ -29,6 +29,7 @@ import org.w3c.dom.Text;
 
 import java.util.Locale;
 import java.util.Random;
+import java.util.regex.Pattern;
 
 public class VoterInfoActivity extends AppCompatActivity {
     // * Broadcast receiver, filter, and string that will be used for changing the language in the app
@@ -39,6 +40,9 @@ public class VoterInfoActivity extends AppCompatActivity {
     // * Variable to hold all the polling stations
     private String[] pollingStations;
     private ListView mainList;
+
+    TextView addressText;
+    Button continueButton;
 
     private void receiver(){
         mfilter1 = new IntentFilter(SETTINGS_INTENT);
@@ -66,9 +70,18 @@ public class VoterInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String check = intent.getStringExtra("com.CHECK");
 
-        Toolbar myTool = (Toolbar)findViewById(R.id.voter_toolbar);
+        Toolbar myTool = (Toolbar)findViewById(R.id.my_toolbar);
         setSupportActionBar(myTool);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        myTool.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
 
         if(check == null){
            // Toast.makeText(getApplicationContext(), "THIS IS EMPTY", Toast.LENGTH_LONG).show();
@@ -79,155 +92,42 @@ public class VoterInfoActivity extends AppCompatActivity {
             setAppLocale(language, getApplicationContext());
         }
 
-        handleSurvey();
+        addressText = (TextView) findViewById(R.id.enterAddressEditText);
+        continueButton = (Button)findViewById(R.id.nextButton);
 
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.settings_action_items, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        int id = item.getItemId();
-        switch (id)
-        {
-            case R.id.back_button:
-                finish();
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-
-        return super.onOptionsItemSelected(item);
+        handleNextButton();
     }
 
-    private void handleSurvey(){
+    public void step1VoteInfo(String address){
 
-        Button submitBTN = (Button)findViewById(R.id.SubmitButton);
-        submitBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getAllInfoFromRadioGroups();
-                handlePollingMap();
-            }
-        });
-    }
+        //Pattern p = Pattern.compile("\\d{1,5}\\s\\w.\\s(\\b\\w*\\b\\s){1,2}\\w*\\.");
 
-    private void handlePollingMap(){
-        final Button pollingButton = (Button)findViewById(R.id.goToMapsButton);
-        final TextView address = (TextView)findViewById(R.id.addressEditText);
-        final TextView pollingStation = (TextView) findViewById(R.id.pollingStationTextView);
-
-        String s = address.getText().toString();
-        String polling = getPollingLocation();
-        updatePollingStation(s, polling);
-
-        pollingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String s = address.getText().toString();
-                String temp = pollingStation.getText().toString();
-                String found = "";
-
-                for(int i = 0; i < pollingStations.length; i++){
-                    if(pollingStations[i] == temp){
-                        found = temp;
-                    }
-                }
-
-                updateMapsButton(s, found);
-            }
-        });
-    }
-
-
-
-    private String getPollingLocation(){
-        Random r = new Random();
-        int randomNum = r.nextInt(9 - 0) + 0;
-
-
-        return pollingStations[randomNum];
-    }
-
-    private void updateMapsButton(String address, String polling){
-        if(checkString(address)){
-            Uri pollingAddress = Uri.parse("geo:37.7749,-122.4192?q=" + Uri.encode(polling));
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, pollingAddress );
-            mapIntent.setPackage("com.google.android.apps.maps");
-            startActivity(mapIntent);
-
-        }
-    }
-
-
-    private void updatePollingStation(String address, String polling){
-
-        if(checkString(address)) {
-
-            final TextView pollingStation = (TextView) findViewById(R.id.pollingStationTextView);
-            pollingStation.setText(polling);
-        }
-    }
-    // * Assume correct input
-    private boolean checkString(String address){
-
+        System.out.println(address);
         if(address.isEmpty()){
-            return false;
+            Toast.makeText(getApplicationContext(), "THE ADDRESS IS EMPTY... TRY AGAIN", Toast.LENGTH_LONG).show();
         }
         else{
-            Log.i("CHECK2", address);
-            return true;
-        }
-    }
-
-
-    private void getAllInfoFromRadioGroups(){
-        RadioGroup group1 = (RadioGroup)findViewById(R.id.statusRadioGroup);
-        RadioGroup group2 = (RadioGroup)findViewById(R.id.q1RadioGroup);
-        RadioGroup group3 = (RadioGroup)findViewById(R.id.q2RadioGroup);
-
-        String status = handleStatusRadioGroup(group1);
-        String question1Answer = handleStatusRadioGroup(group2);
-        String question2Answer = handleStatusRadioGroup(group3);
-
-        checkIfEligible(status, question1Answer, question2Answer);
-
-
-    }
-
-    private void checkIfEligible(String status, String q1, String q2){
-        Resources res = getResources();
-        TextView eligibleView = (TextView)findViewById(R.id.eligibleTextView);
-        if(status == res.getString(R.string.Citizen) || status == res.getString(R.string.GreenCard)){
-            if(q1 == res.getString(R.string.NoButton) && q2 == res.getString(R.string.YesButton)){
-                eligibleView.setText("You are Eligible to VOTE!!");
+            Boolean check = Pattern.matches("\\d{1,5}\\s\\w.?\\s(\\b\\w*\\b\\s){1,2}\\w*\\.?", address);
+            if(check){
+                Toast.makeText(getApplicationContext(), "THE ADDRESS IS VALID", Toast.LENGTH_LONG).show();
+                Intent step2Intent = new Intent(getApplicationContext(), VoterInfoActivity2.class);
+                startActivity(step2Intent);
             }
             else{
-                eligibleView.setText("You are NOT Eligible to VOTE!!");
+                Toast.makeText(getApplicationContext(), "THE ADDRESS IS NOT VALID", Toast.LENGTH_LONG).show();
             }
         }
-        else{
-            eligibleView.setText("You are NOT Eligible to VOTE!!");
-        }
+
     }
 
-    private String handleStatusRadioGroup(RadioGroup group){
-
-        int radioButtonID = group.getCheckedRadioButtonId();
-
-        View radioButton = group.findViewById(radioButtonID);
-        int idx = group.indexOfChild(radioButton);
-
-        RadioButton r = (RadioButton) group.getChildAt(idx);
-        String selectedtext = r.getText().toString();
-        return selectedtext;
+    public void handleNextButton(){
+        continueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                step1VoteInfo(addressText.getText().toString());
+            }
+        });
     }
-
 
 
 

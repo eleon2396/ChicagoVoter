@@ -30,9 +30,17 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         // * Set up the toolbar with back button
-        Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.settings_toolbar);
+        Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(chicagoToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        chicagoToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // * Set up the change language button for spanish
         Button changeToSpanishBTN = (Button)findViewById(R.id.changeToSpanishBTN);
@@ -60,48 +68,48 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
 
-        // * Switch for Notifications but we havent set up yet what kind of notifactions, for now a Toast
-        Switch notificationSwitch  = (Switch)findViewById(R.id.notificationSwitch);
-        notificationSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-                    Toast.makeText(getApplicationContext(), "THE NOTIFICATIONS ARE ON", Toast.LENGTH_LONG).show();
-                }
-                else{
-                    Toast.makeText(getApplicationContext(), "THE NOTIFICATIONS ARE OFF", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+//        // * Switch for Notifications but we havent set up yet what kind of notifactions, for now a Toast
+//        Switch notificationSwitch  = (Switch)findViewById(R.id.notificationSwitch);
+//        notificationSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(isChecked) {
+//                    Toast.makeText(getApplicationContext(), "THE NOTIFICATIONS ARE ON", Toast.LENGTH_LONG).show();
+//                }
+//                else{
+//                    Toast.makeText(getApplicationContext(), "THE NOTIFICATIONS ARE OFF", Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        });
 
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.settings_action_items, menu);
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        // * Trigger events with the options item selected
-        int id = item.getItemId();
-        switch (id)
-        {
-            case R.id.back_button:
-                finish();
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu)
+//    {
+//        getMenuInflater().inflate(R.menu.settings_action_items, menu);
+//        return true;
+//    }
+//
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item)
+//    {
+//        // * Trigger events with the options item selected
+//        int id = item.getItemId();
+//        switch (id)
+//        {
+//            case R.id.back_button:
+//                finish();
+//                break;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
     // * This function will send out an ordered broadcast to the other activities so that they can change the language of the app
     private void sendLan(String language){

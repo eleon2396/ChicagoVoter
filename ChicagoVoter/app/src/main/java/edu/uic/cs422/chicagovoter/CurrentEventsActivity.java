@@ -1,13 +1,16 @@
 package edu.uic.cs422.chicagovoter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -35,7 +38,9 @@ public class CurrentEventsActivity extends AppCompatActivity {
     private ArrayList<Events> eventsLists = null;
     private EventsAdapter eventAdapter;
 
-
+    private String[] candidateClickableSites;
+    private String[] eventsClickableSites;
+    private boolean buttonSwitch = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +48,16 @@ public class CurrentEventsActivity extends AppCompatActivity {
 
         Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.curr_toolbar);
         setSupportActionBar(chicagoToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        chicagoToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        candidateClickableSites =  getResources().getStringArray(R.array.candidate_click_web);
+        eventsClickableSites = getResources().getStringArray(R.array.event_websites);
 
         // get strings for events going on in chicago
         eventNames = getResources().getStringArray(R.array.event_name);
@@ -83,7 +97,24 @@ public class CurrentEventsActivity extends AppCompatActivity {
 
         setEventsListener();
         setCandidatesListener();
+        currEvents.setOnItemClickListener(listListener);
     }
+
+    private ListView.OnItemClickListener listListener = new ListView.OnItemClickListener()
+    {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View v, int position, long id)
+        {
+            if(buttonSwitch)
+            {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(eventsClickableSites[position]));
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(candidateClickableSites[position]));
+                startActivity(intent);
+            }
+        }
+    };
 
     public void setEventsListener()
     {
@@ -93,9 +124,10 @@ public class CurrentEventsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ListView currEvents = (ListView) findViewById(R.id.current_events_listview);
                 currEvents.setAdapter(eventAdapter);
-
+                buttonSwitch = true;
                 Button eventBtn = (Button) findViewById(R.id.events_button);
                 Button candidateBtn = (Button) findViewById(R.id.candidates_button);
+
                 eventBtn.setBackgroundColor(Color.parseColor("#c0c9d6"));
                 candidateBtn.setBackgroundColor(Color.parseColor("#e3e9f2"));
                 //eventBtn.getBackground().setColorFilter(Color.parseColor("#e3e9f2"), PorterDuff.Mode.DARKEN);
@@ -108,42 +140,20 @@ public class CurrentEventsActivity extends AppCompatActivity {
     {
         Button candidateBtn = (Button) findViewById(R.id.candidates_button);
         candidateBtn.setBackgroundColor(Color.parseColor("#c0c9d6"));
+
         candidateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ListView currEvents = (ListView) findViewById(R.id.current_events_listview);
                 currEvents.setAdapter(candidateAdapter);
-
+                buttonSwitch = false;
                 Button eventBtn = (Button) findViewById(R.id.events_button);
                 Button candidateBtn = (Button) findViewById(R.id.candidates_button);
+
                 eventBtn.setBackgroundColor(Color.parseColor("#e3e9f2"));
                 candidateBtn.setBackgroundColor(Color.parseColor("#c0c9d6"));
             }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.settings_action_items, menu);
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        int id = item.getItemId();
-        switch (id)
-        {
-            case R.id.back_button:
-                finish();
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-
-        return super.onOptionsItemSelected(item);
-    }
 }

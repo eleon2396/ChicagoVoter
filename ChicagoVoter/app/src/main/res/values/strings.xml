@@ -1,27 +1,28 @@
 <resources>
     <string name="app_name">ChicagoVoter</string>
-    <string name="current_events_string"><font size="25">Current Events</font>\n\n<font size="12">find information about political events near you. Learn more about active candidates</font></string>
+    <string name="current_events_string"><font size="25">Candidates/Current Events</font>\n\n<font size="12">Find information about political events near you. Learn more about active candidates</font></string>
     <string name="voter_information_string"><font size="25">Voter Information</font>\n\n<font size="12">Find out if you are eligible to vote and where you can go vote</font></string>
     <string name="my_reps_string"> <font size="25">My Representatives</font>\n\n<font size="12">Find more information on who your local officials are</font></string>
     <string name="home_desc">The home screen icon indicates that the user is currently in the home activity</string>
     <string name="app_title"><b>Chicago Voter</b></string>
     <string name="settings_string"><b>Settings</b></string>
     <string name="representatives_string"><b>Representatives</b></string>
-    <string name="current_events"><b>Current Events</b></string>
+    <string name="current_events"><b>Candidates/Current Events</b></string>
     <string name="Test"><b>THIS IS A TEST1</b></string>
 
     <string name="Notifications">Notifications</string>
     <string name="Switch">Allow Push Notifications</string>
     <string name="Accessibility">Accessibility</string>
-    <string name="ChangeToSpan">Change to Spanish</string>
-    <string name="ChangeToEng">Change to English</string>
+    <string name="ChangeToSpan" translatable="false">Cambia al Español</string>
+
+    <string name="ChangeToEng" translatable="false">Change to English</string>
     <string name="TextSize">Change Text Size</string>
     <string name="autofill_rep_text">find representative</string>
 
-    <string name="VoterInfo">Voter Information</string>
+    <string name="VoterInfo"> <b>Voter Information </b> </string>
     <string name="nameView">Name:</string>
     <string name="EnterName">Enter your name</string>
-    <string name="addressView">Address:</string>
+    <string name="addressView">Let\'s start with your Address:</string>
     <string name="EnterAddress">Enter your address</string>
     <string name="citizenShipView">What is your current citizenship status?</string>
     <string name="citizenshipView">Have you ever been convicted of a felony?</string>
@@ -39,6 +40,8 @@
     <string name="Undoc">Undocumented</string>
 
     <string name="SubmitBTN">Submit</string>
+    <string name="nextButton">Continue</string>
+    <string name="step1">Step 1:</string>
 
     <string-array name="pollingLocation">
         <item>2242 S Damen Ave, Chicago, IL 60608</item>
@@ -54,12 +57,11 @@
     </string-array>
 
 
-
-
     <string name="election_text"><font size="20">Next Election:</font> <font size="25"><b>3 Days</b></font></string>
     <string name="events_tab_button">Events</string>
     <string name="candidates_tab_button">Candidates</string>
 
+    <!--*******************************************************************************************************************************-->
     <string-array name="rep_names">
         <item>Jesus Garcia</item>
         <item>Robin Kelly</item>
@@ -81,55 +83,57 @@
         <item>Alderman</item>
     </string-array>
     <string-array name="political_party">
-        <item>Democrat</item>
-        <item>Democrat</item>
-        <item>Democrat</item>
-        <item>Democrat</item>
-        <item>Democrat</item>
-        <item>Democrat</item>
-        <item>Democrat</item>
-        <item>Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
+        <item>Politcal Affiliation: Democrat</item>
     </string-array>
     <string-array name="website">
-        <item>chuygarcia.house.gov</item>
-        <item>robinkelly.house.gov</item>
-        <item>edwardburke2019.com</item>
-        <item>robertomaldonado.com</item>
-        <item>chicago.gov/city/en/depts/mayor.html</item>
-        <item>aldermanhopkins.com</item>
-        <item>citizensforpatdowell.com</item>
-        <item>aldsophiaking.com</item>
+        <item>Website: chuygarcia.house.gov</item>
+        <item>Website: robinkelly.house.gov</item>
+        <item>Website: edwardburke2019.com</item>
+        <item>Website: robertomaldonado.com</item>
+        <item>Website: chicago.gov/city/en/depts/mayor.html</item>
+        <item>Website: aldermanhopkins.com</item>
+        <item>Website: citizensforpatdowell.com</item>
+        <item>Website: aldsophiaking.com</item>
     </string-array>
     <string-array name="email">
-        <item>press@chuygarcia.org</item>
-        <item>NA</item>
-        <item>ward14@cityofchicago.org</item>
-        <item>ward26@cityofchicago.org</item>
-        <item>NA</item>
-        <item>ward02@cityofchicago.org</item>
-        <item>ward03@cityofchicago.org</item>
-        <item>ward04@cityofchicago.org</item>
+        <item>Email: press@chuygarcia.org</item>
+        <item>Email: NA</item>
+        <item>Email: ward14@cityofchicago.org</item>
+        <item>Email: ward26@cityofchicago.org</item>
+        <item>Email: NA</item>
+        <item>Email: ward02@cityofchicago.org</item>
+        <item>Email: ward03@cityofchicago.org</item>
+        <item>Email: ward04@cityofchicago.org</item>
     </string-array>
     <string-array name="phone_numer">
-        <item>(773) 342-0774</item>
-        <item>(708) 679-0078</item>
-        <item>(773) 471-1414</item>
-        <item>(773) 395-0143</item>
-        <item>NA</item>
-        <item>(312) 643-2299</item>
-        <item>(773) 373-9273</item>
-        <item>(773) 536-8103</item>
+        <item>Phone: (773) 342-0774</item>
+        <item>Phone: (708) 679-0078</item>
+        <item>Phone: (773) 471-1414</item>
+        <item>Phone: (773) 395-0143</item>
+        <item>Phone: NA</item>
+        <item>Phone: (312) 643-2299</item>
+        <item>Phone: (773) 373-9273</item>
+        <item>Phone: (773) 536-8103</item>
     </string-array>
     <string-array name="is_running_again">
-        <item>Yes</item>
-        <item>Yes</item>
-        <item>Yes</item>
-        <item>Yes</item>
-        <item>Yes</item>
-        <item>Yes</item>
-        <item>Yes</item>
-        <item>Yes</item>
+        <item>Is Running?: Yes</item>
+        <item>Is Running?: Yes</item>
+        <item>Is Running?: Yes</item>
+        <item>Is Running?: Yes</item>
+        <item>Is Running?: Yes</item>
+        <item>Is Running?: Yes</item>
+        <item>Is Running?: Yes</item>
+        <item>Is Running?: Yes</item>
     </string-array>
+
+
 
     <string-array name="event_name">
         <item>Chicago Mayoral Forum</item>
@@ -159,6 +163,15 @@
         <item>With the Obama Presidential Center and Tiger Woods Golf course without a Community Benefits Agreement, the race for Alderman in 5th Ward has brought South Shore front and center. What"'"s at stake? Who should you vote for? What"'"s In it for South Shore? What are the candidate"'"s position on a CBA, vision for economic development, and public safety?</item>
         <item>Flyering for Lori Lightfoot</item>
     </string-array>
+    <string-array name="event_websites">
+        <item>https://www.eventbrite.com/e/chicago-mayoral-forum-tickets-58735393142#</item>
+        <item>https://www.eventbrite.com/e/2020-presidential-candidate-julian-castro-registration-58871757010#</item>
+        <item>https://www.eventbrite.com/e/trump-2020-gala-tickets-59571848001</item>
+        <item>https://www.eventbrite.com/e/its-a-runoff-in-the-5th-ward-tickets-58451396701#</item>
+        <item>https://www.eventbrite.com/e/pilsen-alliance-20th-year-anniversary-celebration-unity-is-key-tickets-52764756808#</item>
+    </string-array>
+
+
 
     <string-array name="candidate_names">
         <item>Alexander Acevedo</item>
@@ -169,36 +182,56 @@
         <item>Lori Lightfoot</item>
     </string-array>
     <string-array name="running_for_office">
-        <item>Alderman</item>
-        <item>Alderman</item>
-        <item>Treasurer</item>
-        <item>Treasurer</item>
-        <item>Mayor</item>
-        <item>Mayor</item>
+        <item>Running For: Alderman</item>
+        <item>Running For: Alderman</item>
+        <item>Running For: Treasurer</item>
+        <item>Running For: Treasurer</item>
+        <item>Running For: Mayor</item>
+        <item>Running For: Mayor</item>
     </string-array>
     <string-array name="candidate_political_party">
-        <item>No Party</item>
-        <item>No Party</item>
-        <item>No Party</item>
-        <item>No Party</item>
-        <item>No Party</item>
-        <item>No Party</item>
+        <item>Politcal Affiliation: No Party</item>
+        <item>Politcal Affiliation: No Party</item>
+        <item>Politcal Affiliation: No Party</item>
+        <item>Politcal Affiliation: No Party</item>
+        <item>Politcal Affiliation: No Party</item>
+        <item>Politcal Affiliation: No Party</item>
     </string-array>
     <string-array name="candidate_contact_info">
-        <item>nick@alexfor25.com</item>
-        <item>teamsigcho@gmail.com</item>
-        <item>conyearservin.com/contact-us-2</item>
-        <item>info@chicago47.org</item>
-        <item>press@toniforchicago.com</item>
-        <item>info@lightfootforchicago.com</item>
+        <item>Contact Info: nick@alexfor25.com</item>
+        <item>Contact Info: teamsigcho@gmail.com</item>
+        <item>Contact Info: conyearservin.com/contact-us-2</item>
+        <item>Contact Info: info@chicago47.org</item>
+        <item>Contact Info: press@toniforchicago.com</item>
+        <item>Contact Info: info@lightfootforchicago.com</item>
     </string-array>
     <string-array name="candidate_website">
-        <item>alexfor25.com</item>
-        <item>sigchofor25.com/</item>
-        <item>conyearservin.com/</item>
-        <item>chicago47.org/</item>
-        <item>toniforchicago.com/</item>
-        <item>lightfootforchicago.com/</item>
+        <item>Website: alexfor25.com</item>
+        <item>Website: sigchofor25.com/</item>
+        <item>Website: conyearservin.com/</item>
+        <item>Website: chicago47.org/</item>
+        <item>Website: toniforchicago.com/</item>
+        <item>Website: lightfootforchicago.com/</item>
     </string-array>
+    <string-array name="candidate_click_web">
+        <item>http://alexfor25.com/</item>
+        <item>http://sigchofor25.com/</item>
+        <item>http://conyearservin.com/</item>
+        <item>http://chicago47.org/</item>
+        <item>http://toniforchicago.com/</item>
+        <item>http://lightfootforchicago.com/</item>
+    </string-array>
+
+    <string-array name="rep_clickable_website">
+        <item>http://chuygarcia.house.gov/</item>
+        <item>http://robinkelly.house.gov/</item>
+        <item>http://edwardburke2019.com/</item>
+        <item>http://robertomaldonado.com/</item>
+        <item>http://chicago.gov/city/en/depts/mayor.html</item>
+        <item>http://aldermanhopkins.com/</item>
+        <item>http://citizensforpatdowell.com/</item>
+        <item>http://aldsophiaking.com/</item>
+    </string-array>
+
 
 </resources>

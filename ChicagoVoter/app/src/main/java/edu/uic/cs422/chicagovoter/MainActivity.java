@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar chicagoToolbar = (Toolbar) findViewById(R.id.mToolbar);
         setSupportActionBar(chicagoToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
 
         receiver();
 

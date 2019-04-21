@@ -10,33 +10,23 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/curr_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="60sp"
-        android:background="@android:color/holo_red_dark"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8BC34A"
         android:elevation="4dp"
-        android:gravity="center_vertical|start">
-
-        <TextView
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:paddingStart="40dp"
-            android:paddingEnd="10dp"
-            android:text="@string/current_events"
-            android:textAppearance="@android:style/TextAppearance.Material.Headline"
-            android:textStyle="bold" />
-
-    </android.support.v7.widget.Toolbar>
+        android:gravity="center_vertical|start"
+        app:navigationIcon="@android:drawable/ic_media_previous"
+        app:title="@string/current_events" />
 
     <EditText
         android:id="@+id/current_events_edittext"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="274dp"
+        android:layout_height="57dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:drawableStart="@drawable/resizer"
         android:ems="10"
         android:inputType="textPersonName"
+        android:singleLine="true"
         android:text="" />
 
     <TextView
@@ -45,11 +35,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:background="@color/timer_banner"
+        android:layout_marginBottom="20dp"
+        android:background="#79C8F0"
         android:paddingLeft="70dp"
         android:paddingTop="10dp"
         android:paddingBottom="5dp"
-        android:text="@string/election_text" />
+        android:text="@string/election_text"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,10 +51,12 @@
         <Button
             android:id="@+id/candidates_button"
             style="@style/candidateTheme.Button"
-            android:layout_width="wrap_content"
+            android:layout_width="67dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/candidates_tab_button" />
+            android:enabled="true"
+            android:text="@string/candidates_tab_button"
+            android:textColor="#16040A" />
 
         <Button
             android:id="@+id/events_button"
@@ -70,7 +64,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/events_tab_button" />
+            android:enabled="true"
+            android:text="@string/events_tab_button"
+            android:textColor="#0B0613" />
 
     </LinearLayout>
 
